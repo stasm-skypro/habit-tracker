@@ -1,0 +1,112 @@
+[
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "is_pleasant": true,
+      "place": "Парк",
+      "action": "Короткая прогулка",
+      "created_at": "2024-04-01T09:00:00Z"
+    }
+  },
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "is_pleasant": true,
+      "place": "Балкон",
+      "action": "Выпить кофе",
+      "created_at": "2024-04-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "is_pleasant": true,
+      "place": "Кухня",
+      "action": "Съесть фрукт",
+      "created_at": "2024-04-02T08:30:00Z"
+    }
+  },
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "is_pleasant": true,
+      "place": "Гостиная",
+      "action": "Послушать музыку",
+      "created_at": "2024-04-02T17:00:00Z"
+    }
+  },
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "is_pleasant": true,
+      "place": "Ванная",
+      "action": "Тёплая ванна",
+      "created_at": "2024-04-03T20:00:00Z"
+    }
+  },
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 6,
+    "fields": {
+      "user": 2,
+      "is_pleasant": true,
+      "place": "Кровать",
+      "action": "Почитать книгу",
+      "created_at": "2024-04-04T22:00:00Z"
+    }
+  },
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 7,
+    "fields": {
+      "user": 1,
+      "is_pleasant": true,
+      "place": "Улица",
+      "action": "Пообщаться с другом",
+      "created_at": "2024-04-05T18:00:00Z"
+    }
+  },
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 8,
+    "fields": {
+      "user": 2,
+      "is_pleasant": true,
+      "place": "Кафе",
+      "action": "Съесть десерт",
+      "created_at": "2024-04-06T15:00:00Z"
+    }
+  },
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 9,
+    "fields": {
+      "user": 1,
+      "is_pleasant": true,
+      "place": "Дача",
+      "action": "Поработать в саду",
+      "created_at": "2024-04-07T10:30:00Z"
+    }
+  },
+  {
+    "model": "habit.pleasanthabit",
+    "pk": 10,
+    "fields": {
+      "user": 2,
+      "is_pleasant": true,
+      "place": "Кухня",
+      "action": "Сделать себе чай",
+      "created_at": "2024-04-08T09:15:00Z"
+    }
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "model": "habit.habit",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "place": "Дом",
+      "time": "08:00:00",
+      "action": "Пробежка",
+      "is_pleasant": false,
+      "related_habit": null,
+      "periodicity": 1,
+      "reward": "Посмотреть сериал",
+      "duration": "00:20:00",
+      "is_public": true,
+      "created_at": "2024-04-01T08:00:00Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "place": "Фитнес-зал",
+      "time": "18:00:00",
+      "action": "Тренировка",
+      "is_pleasant": false,
+      "related_habit": null,
+      "periodicity": 2,
+      "reward": "Смузи",
+      "duration": "01:00:00",
+      "is_public": false,
+      "created_at": "2024-04-01T18:00:00Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "place": "Кухня",
+      "time": "07:30:00",
+      "action": "Приготовить полезный завтрак",
+      "is_pleasant": true,
+      "related_habit": null,
+      "periodicity": 1,
+      "reward": "",
+      "duration": "00:15:00",
+      "is_public": false,
+      "created_at": "2024-04-02T07:30:00Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "place": "Балкон",
+      "time": "06:45:00",
+      "action": "Медитация",
+      "is_pleasant": false,
+      "related_habit": 3,
+      "periodicity": 1,
+      "reward": null,
+      "duration": "00:10:00",
+      "is_public": true,
+      "created_at": "2024-04-02T06:45:00Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 5,
+    "fields": {
+      "user": 1,
+      "place": "Гостиная",
+      "time": "21:00:00",
+      "action": "Чтение книги",
+      "is_pleasant": true,
+      "related_habit": null,
+      "periodicity": 1,
+      "reward": null,
+      "duration": "00:30:00",
+      "is_public": false,
+      "created_at": "2024-04-03T21:00:00Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 6,
+    "fields": {
+      "user": 1,
+      "place": "Рабочее место",
+      "time": "10:00:00",
+      "action": "Запись задач на день",
+      "is_pleasant": false,
+      "related_habit": 5,
+      "periodicity": 1,
+      "reward": null,
+      "duration": "00:10:00",
+      "is_public": true,
+      "created_at": "2024-04-04T10:00:00Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 7,
+    "fields": {
+      "user": 2,
+      "place": "Улица",
+      "time": "07:00:00",
+      "action": "Прогулка с собакой",
+      "is_pleasant": false,
+      "related_habit": null,
+      "periodicity": 1,
+      "reward": "Кофе на вынос",
+      "duration": "00:30:00",
+      "is_public": true,
+      "created_at": "2024-04-05T07:00:00Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 8,
+    "fields": {
+      "user": 2,
+      "place": "Кухня",
+      "time": "12:30:00",
+      "action": "Пить воду",
+      "is_pleasant": true,
+      "related_habit": null,
+      "periodicity": 1,
+      "reward": null,
+      "duration": "00:02:00",
+      "is_public": false,
+      "created_at": "2024-04-06T12:30:00Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 9,
+    "fields": {
+      "user": 1,
+      "place": "Спальня",
+      "time": "23:00:00",
+      "action": "Лечь спать вовремя",
+      "is_pleasant": false,
+      "related_habit": 9,
+      "periodicity": 1,
+      "reward": "",
+      "duration": "00:01:00",
+      "is_public": true,
+      "created_at": "2024-04-07T23:00:00Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 10,
+    "fields": {
+      "user": 2,
+      "place": "Ванная",
+      "time": "07:10:00",
+      "action": "Контрастный душ",
+      "is_pleasant": false,
+      "related_habit": 8,
+      "periodicity": 2,
+      "reward": "",
+      "duration": "00:03:00",
+      "is_public": false,
+      "created_at": "2024-04-08T07:10:00Z"
+    }
+  }
+]
