@@ -169,11 +169,3 @@ CELERY_BEAT_SCHEDULER = {
 CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "").split(",")
 CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
 
-# На случай авторизации по кукам - пока не нужно
-# CORS_ALLOW_CREDENTIALS = True
-# Допустимые заголовки и методы - пока не нужно
-# CORS_ALLOW_HEADERS = [
-#     'content-type',
-#     'authorization',
-#     ...
-# ]
