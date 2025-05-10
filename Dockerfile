@@ -34,7 +34,7 @@ COPY entrypoint-celery-beat.sh /entrypoint-celery-beat.sh
 RUN chmod +x /entrypoint-*.sh
 
 # Создаем директорию для статики от имени root и назначаем права
-RUN mkdir -p /app/staticfiles && chown -R userdj:groupdjango /app/staticfiles /app/static
+RUN mkdir -p /app/staticfiles /app/static && chown -R userdj:groupdjango /app/staticfiles /app/static
 
 # Возвращаем пользователя на userdj
 USER userdj
