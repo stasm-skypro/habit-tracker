@@ -2,7 +2,7 @@
 FROM python:3.12-slim
 
 # Создаем группу и пользователя, чтобы комнды не выполнялись от имени root.
-Используем высоскоуровненые команды из Ubuntu (Dedian)
+# Используем высоскоуровненые команды из Ubuntu (Dedian)
 RUN addgroup -S groupdjango && adduser -S -G groupdjango userdj
 
 # Устанавливаем переменные окружения
