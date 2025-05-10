@@ -1,0 +1,137 @@
+services:
+
+  db:
+    image: postgres:17-alpine
+    container_name: psgr
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_HOST=${DB_HOST}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - dbnet
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "${DB_USER}", "-d", "${DB_NAME}"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 5s
+
+  redis:
+    image: redis
+    volumes:
+      - redis-data:/data
+    env_file:
+      - ./.env
+    ports:
+      - "6379:6379"
+    networks:
+      - dbnet
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 5s
+
+  web:
+    build: .
+    image: web
+    container_name: web
+    working_dir: /app
+    command: /entrypoint_web.sh
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+    expose:
+      - "8000"
+    env_file:
+      - ./.env
+    networks:
+      - dbnet
+    depends_on:
+      - db
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 10s
+      retries: 3
+      start_period: 30s
+      timeout: 5s
+
+  celery:
+    build: .
+    image: celery
+    container_name: celery
+    command: /entrypoint_celery.sh
+    working_dir: /app
+    env_file:
+      - ./.env
+    networks:
+      - dbnet
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthcheck"]
+      interval: 10s
+      retries: 3
+      start_period: 30s
+      timeout: 5s
+
+  celery-beat:
+    build: .
+    image: celery-beat
+    container_name: celery-beat
+    command: /entrypoint_celery_beat.sh
+    working_dir: /app
+    env_file:
+      - ./.env
+    networks:
+      - dbnet
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthcheck"]
+      interval: 10s
+      retries: 3
+      start_period: 30s
+      timeout: 5s
+
+  nginx:
+      build:
+        context: .
+        dockerfile: nginx/Dockerfile  # Updated path to Dockerfile
+      container_name: nginx
+      ports:
+        - "80:80"
+      volumes:
+        - static_volume:/app/staticfiles  # монтируем статику из Django
+      depends_on:
+        - web
+      networks:
+        - dbnet
+      healthcheck:  # Проверят доступность главной страницы
+        test: ["CMD", "curl", "-f", "http://localhost/"]
+        interval: 10s
+        timeout: 5s
+        retries: 3
+        start_period: 30s
+
+networks:
+  dbnet:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  static_volume:
+  redis-data:
