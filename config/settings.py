@@ -169,7 +169,8 @@ CELERY_TASK_TRACK_STARTED = True
 # Ограничение по времени выполнения задачи (в секундах)
 CELERY_TASK_TIME_LIMIT = 30 * 60  # 30 минут
 # Планировщик задач для Celery
-CELERY_BEAT_SCHEDULER = {
+CELERY_BEAT_SCHEDULER = "celery.beat:PersistentScheduler"
+CELERY_BEAT_SCHEDULE = {
     "send-habit-reminders-every-minute": {
         "task": "habit.tasks.send_habit_reminders",
         "schedule": crontab(),  # каждую минуту
