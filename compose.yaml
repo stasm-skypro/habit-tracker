@@ -43,7 +43,7 @@ services:
     image: web
     container_name: web
     working_dir: /app
-    command: /entrypoint_web.sh
+    command: /entrypoint-web.sh
     volumes:
       - .:/app
       - static_volume:/app/staticfiles
@@ -67,7 +67,7 @@ services:
     build: .
     image: celery
     container_name: celery
-    command: /entrypoint_celery.sh
+    command: /entrypoint-celery.sh
     working_dir: /app
     env_file:
       - ./.env
@@ -89,7 +89,7 @@ services:
     build: .
     image: celery-beat
     container_name: celery-beat
-    command: /entrypoint_celery_beat.sh
+    command: /entrypoint-celery-beat.sh
     working_dir: /app
     env_file:
       - ./.env

@@ -1,0 +1,1013 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add Пользователь",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change Пользователь",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete Пользователь",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view Пользователь",
+    "content_type": 6,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Привычка",
+    "content_type": 7,
+    "codename": "add_habit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Привычка",
+    "content_type": 7,
+    "codename": "change_habit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Привычка",
+    "content_type": 7,
+    "codename": "delete_habit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Привычка",
+    "content_type": 7,
+    "codename": "view_habit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Приятная привычка",
+    "content_type": 8,
+    "codename": "add_pleasanthabit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Приятная привычка",
+    "content_type": 8,
+    "codename": "change_pleasanthabit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Приятная привычка",
+    "content_type": 8,
+    "codename": "delete_pleasanthabit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Приятная привычка",
+    "content_type": 8,
+    "codename": "view_pleasanthabit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add crontab",
+    "content_type": 9,
+    "codename": "add_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change crontab",
+    "content_type": 9,
+    "codename": "change_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete crontab",
+    "content_type": 9,
+    "codename": "delete_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view crontab",
+    "content_type": 9,
+    "codename": "view_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add interval",
+    "content_type": 10,
+    "codename": "add_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change interval",
+    "content_type": 10,
+    "codename": "change_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete interval",
+    "content_type": 10,
+    "codename": "delete_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view interval",
+    "content_type": 10,
+    "codename": "view_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add periodic task",
+    "content_type": 11,
+    "codename": "add_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change periodic task",
+    "content_type": 11,
+    "codename": "change_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete periodic task",
+    "content_type": 11,
+    "codename": "delete_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view periodic task",
+    "content_type": 11,
+    "codename": "view_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add periodic task track",
+    "content_type": 12,
+    "codename": "add_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change periodic task track",
+    "content_type": 12,
+    "codename": "change_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete periodic task track",
+    "content_type": 12,
+    "codename": "delete_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view periodic task track",
+    "content_type": 12,
+    "codename": "view_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add solar event",
+    "content_type": 13,
+    "codename": "add_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change solar event",
+    "content_type": 13,
+    "codename": "change_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete solar event",
+    "content_type": 13,
+    "codename": "delete_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view solar event",
+    "content_type": 13,
+    "codename": "view_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add clocked",
+    "content_type": 14,
+    "codename": "add_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change clocked",
+    "content_type": 14,
+    "codename": "change_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete clocked",
+    "content_type": 14,
+    "codename": "delete_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view clocked",
+    "content_type": 14,
+    "codename": "view_clockedschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "user",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "habit",
+    "model": "habit"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "habit",
+    "model": "pleasanthabit"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "crontabschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "intervalschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "periodictask"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "periodictasks"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "solarschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "clockedschedule"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5le2iji306d3ycur0z51s2iuja86c0sx",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllOWP8o6XMGa727xgGUSHFSIe4OkVJA-2bmvVTCba1pa7KkkdVFgTr9bhnpIdMO-I7TbdY0T-syZr0r-qBNDzPL83q4fwcVW_3WkdDJ2WbvQg9iAHoEwsLFW1dCwNg535GzBowUIWahPrKJ5MFbyUG9P-vUOEw:1u4LcW:KLBEa5zd7XOe_Ke1s9xG-C-3_8hq-s6ShT4JgNQ3x5c",
+    "expire_date": "2025-04-28T15:21:12.885Z"
+  }
+},
+{
+  "model": "user.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$cgkwnIgt2CqmtxZsHkkB3o$T1JcrP95fSQQt9k9InNc0Nrmxzm9gtp6ialWp3CK1V8=",
+    "last_login": null,
+    "email": "johny.walker@example.com",
+    "first_name": "Johny",
+    "last_name": "Walker",
+    "is_active": true,
+    "is_staff": false,
+    "is_superuser": false,
+    "date_joined": "2024-01-01T10:00:00Z",
+    "telegram_chat_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "user.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$g3Ko9ISFbxqlsg6uq4GXv1$Apz1T3CAzQbV4wRXGyAW/0QQkPgtlkRP9fgUlSjSV3M=",
+    "last_login": null,
+    "email": "jack.daniels@example.com",
+    "first_name": "Jack",
+    "last_name": "Daniels",
+    "is_active": true,
+    "is_staff": false,
+    "is_superuser": false,
+    "date_joined": "2024-02-01T12:00:00Z",
+    "telegram_chat_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "user.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ePiSdiErsGLaIpJH8rlEcF$9gIxwWKQvpP6H7ucYM1stGKQbTXHLR+xE3PFftzKQfE=",
+    "last_login": "2025-04-14T15:21:12.883Z",
+    "email": "stasm226@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_staff": true,
+    "is_superuser": true,
+    "date_joined": "2025-04-14T15:20:48.058Z",
+    "telegram_chat_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "user.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$xebCBO5Igc3XagllTHWZ33$i5PQgzVp0w82JuS1uO0ZSlZXe5FrM1ysdY/g313f8ig=",
+    "last_login": null,
+    "email": "test.user@example.com",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_staff": false,
+    "is_superuser": false,
+    "date_joined": "2025-04-20T10:30:38.717Z",
+    "telegram_chat_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "user.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$xGQnjvHykaM6op9JaF0s3E$tdekM5U3B0IcKM4FNcZRcCpcUb2jgvmN1+IxImPnt4I=",
+    "last_login": null,
+    "email": "test.user2@example.com",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_staff": false,
+    "is_superuser": false,
+    "date_joined": "2025-04-20T10:37:16.378Z",
+    "telegram_chat_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "place": "Дом",
+    "time": "08:00:00",
+    "action": "Пробежка",
+    "is_pleasant": false,
+    "related_habit": null,
+    "periodicity": 1,
+    "reward": "Посмотреть сериал",
+    "duration": "00:20:00",
+    "is_public": true,
+    "created_at": "2024-04-01T08:00:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "place": "Фитнес-зал",
+    "time": "18:00:00",
+    "action": "Тренировка",
+    "is_pleasant": false,
+    "related_habit": null,
+    "periodicity": 2,
+    "reward": "Смузи",
+    "duration": "01:00:00",
+    "is_public": false,
+    "created_at": "2024-04-01T18:00:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "place": "Кухня",
+    "time": "07:30:00",
+    "action": "Приготовить полезный завтрак",
+    "is_pleasant": true,
+    "related_habit": null,
+    "periodicity": 1,
+    "reward": "",
+    "duration": "00:15:00",
+    "is_public": false,
+    "created_at": "2024-04-02T07:30:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "place": "Балкон",
+    "time": "06:45:00",
+    "action": "Медитация",
+    "is_pleasant": false,
+    "related_habit": 3,
+    "periodicity": 1,
+    "reward": null,
+    "duration": "00:10:00",
+    "is_public": true,
+    "created_at": "2024-04-02T06:45:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "place": "Гостиная",
+    "time": "21:00:00",
+    "action": "Чтение книги",
+    "is_pleasant": true,
+    "related_habit": null,
+    "periodicity": 1,
+    "reward": null,
+    "duration": "00:30:00",
+    "is_public": false,
+    "created_at": "2024-04-03T21:00:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "place": "Рабочее место",
+    "time": "10:00:00",
+    "action": "Запись задач на день",
+    "is_pleasant": false,
+    "related_habit": 5,
+    "periodicity": 1,
+    "reward": null,
+    "duration": "00:10:00",
+    "is_public": true,
+    "created_at": "2024-04-04T10:00:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 7,
+  "fields": {
+    "user": 2,
+    "place": "Улица",
+    "time": "07:00:00",
+    "action": "Прогулка с собакой",
+    "is_pleasant": false,
+    "related_habit": null,
+    "periodicity": 1,
+    "reward": "Кофе на вынос",
+    "duration": "00:30:00",
+    "is_public": true,
+    "created_at": "2024-04-05T07:00:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 8,
+  "fields": {
+    "user": 2,
+    "place": "Кухня",
+    "time": "12:30:00",
+    "action": "Пить воду",
+    "is_pleasant": true,
+    "related_habit": null,
+    "periodicity": 1,
+    "reward": null,
+    "duration": "00:02:00",
+    "is_public": false,
+    "created_at": "2024-04-06T12:30:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 9,
+  "fields": {
+    "user": 1,
+    "place": "Спальня",
+    "time": "23:00:00",
+    "action": "Лечь спать вовремя",
+    "is_pleasant": false,
+    "related_habit": 9,
+    "periodicity": 1,
+    "reward": "",
+    "duration": "00:01:00",
+    "is_public": true,
+    "created_at": "2024-04-07T23:00:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 10,
+  "fields": {
+    "user": 2,
+    "place": "Ванная",
+    "time": "07:10:00",
+    "action": "Контрастный душ",
+    "is_pleasant": false,
+    "related_habit": 8,
+    "periodicity": 2,
+    "reward": "",
+    "duration": "00:03:00",
+    "is_public": false,
+    "created_at": "2024-04-08T07:10:00Z"
+  }
+},
+{
+  "model": "habit.habit",
+  "pk": 11,
+  "fields": {
+    "user": 2,
+    "place": "Баня",
+    "time": "07:10:00",
+    "action": "Холодная купель",
+    "is_pleasant": false,
+    "related_habit": 8,
+    "periodicity": 2,
+    "reward": "",
+    "duration": "00:02:00",
+    "is_public": false,
+    "created_at": "2025-04-14T11:21:54.736Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "is_pleasant": true,
+    "place": "Парк",
+    "action": "Короткая прогулка",
+    "created_at": "2024-04-01T09:00:00Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "is_pleasant": true,
+    "place": "Балкон",
+    "action": "Выпить кофе",
+    "created_at": "2024-04-01T10:00:00Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 3,
+  "fields": {
+    "user": 1,
+    "is_pleasant": true,
+    "place": "Кухня",
+    "action": "Съесть фрукт",
+    "created_at": "2024-04-02T08:30:00Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "is_pleasant": true,
+    "place": "Гостиная",
+    "action": "Послушать музыку",
+    "created_at": "2024-04-02T17:00:00Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "is_pleasant": true,
+    "place": "Ванная",
+    "action": "Тёплая ванна",
+    "created_at": "2024-04-03T20:00:00Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 6,
+  "fields": {
+    "user": 2,
+    "is_pleasant": true,
+    "place": "Кровать",
+    "action": "Почитать книгу",
+    "created_at": "2024-04-04T22:00:00Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 7,
+  "fields": {
+    "user": 1,
+    "is_pleasant": true,
+    "place": "Улица",
+    "action": "Пообщаться с другом",
+    "created_at": "2024-04-05T18:00:00Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 8,
+  "fields": {
+    "user": 2,
+    "is_pleasant": true,
+    "place": "Кафе",
+    "action": "Съесть десерт",
+    "created_at": "2024-04-06T15:00:00Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 9,
+  "fields": {
+    "user": 1,
+    "is_pleasant": true,
+    "place": "Дача",
+    "action": "Поработать в саду",
+    "created_at": "2024-04-07T10:30:00Z"
+  }
+},
+{
+  "model": "habit.pleasanthabit",
+  "pk": 10,
+  "fields": {
+    "user": 2,
+    "is_pleasant": true,
+    "place": "Кухня",
+    "action": "Сделать себе чай",
+    "created_at": "2024-04-08T09:15:00Z"
+  }
+}
+]
