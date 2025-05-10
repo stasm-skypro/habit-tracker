@@ -33,10 +33,10 @@ RUN pip install gunicorn
 COPY . .
 
 # Копируем скрипты и даём права на исполнение
-COPY entrypoint_web.sh /entrypoint_web.sh
-COPY entrypoint_celery.sh /entrypoint_celery.sh
-COPY entrypoint_celery_beat.sh /entrypoint_celery_beat.sh
-RUN chmod +x /entrypoint_*.sh
+COPY entrypoint-web.sh /entrypoint-web.sh
+COPY entrypoint-celery.sh /entrypoint-celery.sh
+COPY entrypoint-celery-beat.sh /entrypoint-celery-beat.sh
+RUN chmod +x /entrypoint-*.sh
 
 # Создаем директорию для статики от имени root и назначаем права
 RUN mkdir -p /app/staticfiles && chown -R userdj:groupdjango /app/staticfiles
