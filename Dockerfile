@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y netcat-traditional && rm -rf /var/lib/a
 # Копируем и устанавливаем зависимости
 COPY requirements.txt .
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install gunicorn
 
 # Копируем все файлы проекта в контейнер
@@ -34,7 +34,7 @@ COPY entrypoint-celery-beat.sh /entrypoint-celery-beat.sh
 RUN chmod +x /entrypoint-*.sh
 
 # Создаем директорию для статики от имени root и назначаем права
-RUN mkdir -p /app/staticfiles && chown -R userdj:groupdjango /app/staticfiles
+RUN mkdir -p /app/staticfiles && chown -R userdj:groupdjango /app/staticfiles /app/static
 
 # Возвращаем пользователя на userdj
 USER userdj
