@@ -3,6 +3,7 @@ Django settings for config project.
 """
 
 import os
+import sys
 from datetime import timedelta
 from pathlib import Path
 
@@ -15,12 +16,14 @@ dotenv.load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.getenv("DEBUG") == "True" else False
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+# Allowed hosts
+hosts = os.getenv("DJANGO_ALLOWED_HOSTS")
+ALLOWED_HOSTS = hosts.split(",") if hosts else []
 
 
 # Application definition
@@ -83,6 +86,11 @@ DATABASES = {
 }
 
 
+# Настройка лёгкой БД для тестов
+if "test" in sys.argv:
+    DATABASES["default"] = {"ENGINE": "django.db.backends.sqlite3", "NAME": ":memory:"}
+
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
@@ -101,6 +109,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = "static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+
+# Media files
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/media/"
+FILE_UPLOAD_MAX_MEMORY_SIZE = 2 * 1024 * 1024  # max 2 MB
+
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -138,10 +155,6 @@ SIMPLE_JWT = {
 }
 
 
-# Telegram Integration
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-
-
 # Настройка Celery
 # Очередь брокера и хранилище результатов
 CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL")
@@ -163,6 +176,10 @@ CELERY_BEAT_SCHEDULER = {
         "args": [],
     },
 }
+
+
+# Telegram Integration
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 
 # Настройка CORS - домены, которым разрешён доступ
