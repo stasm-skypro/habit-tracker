@@ -2,8 +2,7 @@
 FROM python:3.12-slim
 
 # Создаем группу и пользователя, чтобы комнды не выполнялись от имени root.
-# Используем высоскоуровненые команды из Ubuntu (Dedian)
-RUN addgroup -S groupdjango && adduser -S -G groupdjango userdj
+RUN groupadd -r groupdjango && useradd -r -g groupdjango userdj
 
 # Устанавливаем переменные окружения
 # Отключает создание .pyc файлов (байткода) при запуске Python-приложения.

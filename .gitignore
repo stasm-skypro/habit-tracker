@@ -172,3 +172,7 @@ db.*
 # Mac OS special folder
 .DS_Store/
 .DS_Store
+
+# Ignore static files
+staticfiles/
+/staticfiles/
