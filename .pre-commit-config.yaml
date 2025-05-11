@@ -13,7 +13,7 @@ repos:
     rev: 24.3.0
     hooks:
       - id: black
-        language_version: python3  # авто-определение твоей версии Python
+        language_version: python3  # авто-определение версии Python
 
   - repo: https://github.com/pre-commit/mirrors-isort
     rev: v5.10.1

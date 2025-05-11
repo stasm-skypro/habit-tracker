@@ -1,6 +1,6 @@
 [project]
 name = "habit-tracker"
-version = "0.1.0"
+version = "0.1.1"
 description = "Habit Tracker"
 authors = [
     {name = "Станислав Маяцкий",email = "stasm226@gmail.com"}

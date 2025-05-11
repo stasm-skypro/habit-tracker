@@ -173,6 +173,5 @@ db.*
 .DS_Store/
 .DS_Store
 
-# Ignore static files
+# Exclude staticfiles dir from Git
 staticfiles/
-/staticfiles/
