@@ -100,9 +100,15 @@ jobs:
           echo "Connecting to ${{ secrets.SERVER_IP }}"
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} <<'EOF'
             set -ex
+
+            # Pull the latest image
             docker pull ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
+
+            # Stop and remove any old container with the same name
             docker stop myapp || true
             docker rm myapp || true
+
+            # Run the new container
             docker run -d \
               --name myapp \
               -p 8000:8000 \
@@ -114,4 +120,21 @@ jobs:
               -e DJANGO_SECRET_KEY='${{ secrets.DJANGO_SECRET_KEY }}' \
               -e DJANGO_ALLOWED_HOSTS='${{ secrets.DJANGO_ALLOWED_HOSTS }}' \
               ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
+
+            # Wait for a while to let the container stabilize
+            sleep 30
+
+            # Check the status of containers
+            docker ps
+
+            # Check logs of the 'myapp' container
+            docker logs myapp
+
+            # Check nginx container logs if it's running (optional)
+            if docker ps -q -f name=nginx; then
+              echo "nginx logs:"
+              docker logs nginx
+            else
+              echo "nginx container not found"
+            fi
           EOF
