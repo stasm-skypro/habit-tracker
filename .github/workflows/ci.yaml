@@ -97,8 +97,9 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << "EOF"
-            set -e
+          echo "Connecting to ${{ secrets.SERVER_IP }}"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} <<'EOF'
+            set -ex
             docker pull ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
             docker stop myapp || true
             docker rm myapp || true
@@ -113,7 +114,4 @@ jobs:
               -e DJANGO_SECRET_KEY='${{ secrets.DJANGO_SECRET_KEY }}' \
               -e DJANGO_ALLOWED_HOSTS='${{ secrets.DJANGO_ALLOWED_HOSTS }}' \
               ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
-              ssh user@host <<EOF
-                set -ex
-                ...
-            EOF
+          EOF
