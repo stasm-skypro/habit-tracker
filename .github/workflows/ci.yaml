@@ -91,6 +91,7 @@ jobs:
 
       - name: Deploy to server
         run: |
+          IMAGE="${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}"
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << "EOF"
           docker pull ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
           docker stop myapp || true
@@ -103,5 +104,5 @@ jobs:
             -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
             -e DB_HOST=${{ secrets.DB_HOST }} \
             -e TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
-            ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
+            $IMAGE
           EOF
