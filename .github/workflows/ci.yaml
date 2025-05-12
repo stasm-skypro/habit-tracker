@@ -110,5 +110,7 @@ jobs:
               -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
               -e DB_HOST=${{ secrets.DB_HOST }} \
               -e TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }} \
+              -e DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }} \
+              -e DJANGO_ALLOWED_HOSTS=${{ secrets.DJANGO_ALLOWED_HOSTS }} \
               ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
           EOF
