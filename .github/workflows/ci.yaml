@@ -99,6 +99,7 @@ jobs:
         run: |
           IMAGE="${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}"
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << "EOF"
+          set -e
           docker pull ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
           docker stop myapp || true
           docker rm myapp || true
@@ -109,6 +110,6 @@ jobs:
             -e DB_USER=${{ secrets.DB_USER }} \
             -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
             -e DB_HOST=${{ secrets.DB_HOST }} \
-            -e TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
+            -e TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }} \
             $IMAGE
           EOF
