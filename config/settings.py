@@ -145,12 +145,8 @@ REST_FRAMEWORK = {
 
 # Настройка Simple JWT
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(
-        minutes=int(os.getenv("ACCESS_TOKEN_LIFETIME", 30))
-    ),  # Настройка времени жизни токена доступа
-    "REFRESH_TOKEN_LIFETIME": timedelta(
-        days=int(os.getenv("REFRESH_TOKEN_LIFETIME", 1))
-    ),  # Настройка времени жизни токена обновления
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),  # Настройка времени жизни токена доступа
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),  # Настройка времени жизни токена обновления
     "AUTH_HEADER_TYPES": ("Bearer",),  # Настройка типа заголовка для токена
 }
 
@@ -184,5 +180,5 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 
 # Настройка CORS - домены, которым разрешён доступ
-CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "").split(",")
-CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000", "http://http://5.35.108.203/"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000"]
