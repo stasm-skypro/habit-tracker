@@ -120,8 +120,9 @@ jobs:
 
       - name: Copy files via SCP
         run: |
-          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
-          scp -r . ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:/home/${{ secrets.SSH_USER }}/app/
+          rsync -avz -e "ssh -o StrictHostKeyChecking=no -i key.pem" \
+          docker-compose.yml .env \
+          ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:/home/${{ secrets.SSH_USER }}/app/
 
       - name: Deploy via SSH
         run: |
