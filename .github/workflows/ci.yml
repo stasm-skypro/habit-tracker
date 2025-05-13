@@ -101,8 +101,8 @@ jobs:
 
       - name: Build and start containers
         run: |
-          docker-compose -f compose.yml build
-          docker-compose -f compose.yml up -d
+          docker compose -f compose.yml build
+          docker compose -f compose.yml up -d
           docker ps -a
 
   deploy:
@@ -135,6 +135,6 @@ jobs:
             echo "DB_HOST=${{ secrets.DB_HOST }}" >> .env
             echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" >> .env
 
-            docker-compose -f compose.yml down
-            docker-compose -f compose.yml up --build -d
+            docker compose -f compose.yml down
+            docker compose -f compose.yml up --build -d
           EOF
