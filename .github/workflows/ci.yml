@@ -118,8 +118,12 @@ jobs:
       - name: Copy files to server via rsync
         run: |
           rsync -avz -e "ssh -o StrictHostKeyChecking=no" \
-            compose.yml .env \
+            --exclude '.git' \
+            ./ \
             ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:/home/${{ secrets.SSH_USER }}/app/
+          # rsync -avz -e "ssh -o StrictHostKeyChecking=no" \
+          #   compose.yml .env \
+          #   ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:/home/${{ secrets.SSH_USER }}/app/
       - name: Run Docker Compose on server
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} <<EOF
