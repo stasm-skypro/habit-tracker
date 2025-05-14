@@ -127,5 +127,5 @@ jobs:
             cd /home/${{ secrets.SSH_USER }}/app
             docker compose -f compose.yml down
             docker compose -f compose.yml up --build -d
-            docker compose exec web python manage.py loaddata /habit/fixtures/habit_fixture.json
+            docker compose exec web python manage.py loaddata /user/fixtures/user_fixture.json
           EOF
