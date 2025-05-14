@@ -48,18 +48,21 @@
 - CELERY_RESULT_BACKEND=адрес хранилища результатов
 
 ## API
+- ```POST /api/user/register/ —  регистрация пользователя```
 
-- ```GET /habits/ — список привычек текущего пользователя (с пагинацией)```
+- ```POST /api/user/login/ —  вход пользователя```
 
-- ```POST /habits/ — создание```
+- ```GET /api/habits/ — список привычек текущего пользователя (с пагинацией)```
 
-- ```GET /habits/{id}/ — просмотр```
+- ```POST /api/habits/ — создание```
 
-- ```PUT /habits/{id}/ — полное обновление```
+- ```GET /api/habits/{id}/ — просмотр```
 
-- ```PATCH /habits/{id}/ — частичное обновление```
+- ```PUT /api/habits/{id}/ — полное обновление```
 
-- ```DELETE /habits/{id}/ — удаление```
+- ```PATCH /api/habits/{id}/ — частичное обновление```
+
+- ```DELETE /api/habits/{id}/ — удаление```
 
 ## Github actions
 
