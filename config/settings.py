@@ -23,7 +23,7 @@ DEBUG = True if os.getenv("DEBUG") == "True" else False
 
 # Allowed hosts
 hosts = os.getenv("DJANGO_ALLOWED_HOSTS")
-ALLOWED_HOSTS = hosts.split(",") if hosts else []
+ALLOWED_HOSTS = [host.strip() for host in hosts.split(",")] if hosts else []
 
 
 # Application definition

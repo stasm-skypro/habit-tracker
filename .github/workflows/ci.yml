@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   lint:
@@ -92,6 +92,7 @@ jobs:
           docker compose -f compose.yml build
           docker compose -f compose.yml up -d
           docker ps -a
+
   deploy:
     name: Deploy to YC server
     runs-on: ubuntu-latest

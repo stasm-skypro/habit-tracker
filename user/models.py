@@ -59,7 +59,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         date_joined (datetime): Дата и время регистрации
     """
 
-    # Комменты '# type: ignore[var-annotated]' для mypy - чтобы не требовал анотаций типов
+    # Комменты '# type: ignore[var-annotated]' для mypy - чтобы не требовал аннотаций типов
     email = models.EmailField(unique=True, verbose_name="Email")  # type: ignore[var-annotated]
     first_name = models.CharField(max_length=30, blank=True, verbose_name="Имя")  # type: ignore[var-annotated]
     last_name = models.CharField(max_length=30, blank=True, verbose_name="Фамилия")  # type: ignore[var-annotated]
